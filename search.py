@@ -5,7 +5,7 @@ import re
 from NyaaPy.nyaa import Nyaa
 
 JSON_FILE_NAME: str = "parameters.json"
-
+PATH = "./data"
 
 class RegularSearch:
     # handles search on the nyaa.si website and return a Torrent object
@@ -104,7 +104,7 @@ class ParameterJson:
         for torrent in self._torrent_list:
             download_url = torrent.download_url
             r = requests.get(download_url, allow_redirects=True)
-            open("torrent/" + torrent.name + ".torrent", 'wb').write(r.content)
+            open(PATH + "/" + torrent.name + ".torrent", 'wb').write(r.content) # TODO variable global avec PATH
             print('"' + torrent.name + '" downloaded', sep="")
 
 
