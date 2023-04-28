@@ -5,8 +5,8 @@ import re
 from NyaaPy.nyaa import Nyaa
 
 JSON_FILE_NAME: str = "parameters.json"
-PATH = "/mnt/c/Users/admin/Desktop/Mes Dossiers/4 - torrent/torrent_auto"
-
+# PATH = "/mnt/c/Users/admin/Desktop/Mes Dossiers/4 - torrent/torrent_auto"
+PATH = "/usr/src/app/data"
 
 class RegularSearch:
     # handles search on the nyaa.si website and return a Torrent object

@@ -1,7 +1,7 @@
 FROM python:3.11
 
-WORKDIR "/mnt/c/Users/admin/Desktop/Mes Dossiers/4 - torrent/torrent_auto"
-# RUN mkdir -p /usr/src/app/data
+WORKDIR /usr/src/app
+RUN mkdir -p /usr/src/app/data
 
 RUN pip install NyaaPy
 
