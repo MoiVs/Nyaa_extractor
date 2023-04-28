@@ -5,7 +5,7 @@ import re
 from NyaaPy.nyaa import Nyaa
 
 JSON_FILE_NAME: str = "parameters.json"
-PATH = "./data"
+PATH = "/mnt/c/Users/admin/Desktop/Mes Dossiers/4 - torrent/torrent_auto"
 
 
 class RegularSearch:
