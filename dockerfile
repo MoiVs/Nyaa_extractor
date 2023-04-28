@@ -8,4 +8,4 @@ RUN pip install NyaaPy
 ADD search.py .
 ADD parameters.json .
 
-CMD [ "python3" "./search.py" ]
+RUN python3 ./search.py
