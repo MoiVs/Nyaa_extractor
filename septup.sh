@@ -1,0 +1,1 @@
+docker run nyaa_extractor -v ./data:/usr/src/app/data
