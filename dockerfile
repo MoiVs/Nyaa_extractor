@@ -8,4 +8,4 @@ RUN pip install NyaaPy lxml
 ADD search.py .
 ADD parameters.json .
 
-RUN python3 ./search.py
+CMD ["python3", "./search.py"]

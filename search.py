@@ -5,7 +5,7 @@ import re
 from NyaaPy.nyaa import Nyaa
 
 JSON_FILE_NAME: str = "parameters.json"
-# PATH = "/mnt/c/Users/admin/Desktop/Mes Dossiers/4 - torrent/torrent_auto"
+# PATH = "/mnt/c/Users/admin/Desktop/Mes Dossiers/4 - data/torrent_auto"
 PATH = "/usr/src/app/data"
 
 class RegularSearch:
@@ -28,7 +28,7 @@ class RegularSearch:
         self._translate_team = translate_team.lower()
 
     def search(self) -> object:
-        # searches a torrent on nyaa.si from the parameters it was specified
+        # searches a data on nyaa.si from the parameters it was specified
         nyaa = Nyaa()
         results = nyaa.search(keyword=" ".join([self._name, self._episode, self._translate_team, self._quality]))
 
@@ -49,7 +49,7 @@ class RegularSearch:
             else:
                 i += 1
 
-        # The good torrent name wasn't found in any
+        # The good data name wasn't found in any
         return None
 
 
@@ -101,11 +101,11 @@ class ParameterJson:
         entry["episode"] = episode
 
     def download_torrent(self):
-        # downloads torrent from the torrent list
+        # downloads data from the data list
         for torrent in self._torrent_list:
             download_url = torrent.download_url
             r = requests.get(download_url, allow_redirects=True)
-            open(PATH + "/" + torrent.name + ".torrent", 'wb').write(r.content)  # TODO variable global avec PATH
+            open(PATH + "/" + torrent.name + ".data", 'wb').write(r.content)  # TODO variable global avec PATH
             print('"' + torrent.name + '" downloaded', sep="")
 
 
